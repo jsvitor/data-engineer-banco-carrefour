@@ -1,6 +1,8 @@
 # Data Engineer at Banco Carrefour Bootcamp
 
-![Banco Carrefour Data Engineer | Logo](./assets/BC_bootcamp.png)
+<p align="center">
+    <img src="./assets/BC_bootcamp.png" alt="Banco Carrefour Data Engineer | Logo"/>
+</p>
 
 This repository contains the projects, files, and notes generated across the Bootcamp.
 
