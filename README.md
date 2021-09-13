@@ -1,12 +1,12 @@
-# Data Engineer at Banco Carrefour Bootcamp
+# Cloud Data Engineer at Cognizant Bootcamp
 
 <p align="center">
-    <img src="./assets/BC_bootcamp.png" alt="Banco Carrefour Data Engineer | Logo"/>
+    <img src="./assets/cognizant.png" alt="Banco Carrefour Data Engineer | Logo"/>
 </p>
 
 This repository contains the projects, files, and notes generated across the Bootcamp.
 
-- **[Bootcamp checklist | Notion](https://www.notion.so/Banco-Carrefour-Data-Enginner-5ee277a06ae848b49073aea98753946d)**
+- **[Bootcamp checklist | Notion](https://soapy-beetle-8cf.notion.site/Cognizant-Cloud-Data-Engineer-3f80866593f84c9dabd1b2d3bd224f44)**
 
 
 
