@@ -1,7 +1,7 @@
 # Cloud Data Engineer at Cognizant Bootcamp
 
 <p align="center">
-    <img src="./assets/cognizant.png" alt="Banco Carrefour Data Engineer | Logo"/>
+    <img src="./assets/cognizant.png" alt="Cognizant Cloud Data Engineer | Logo" width="300px" />
 </p>
 
 This repository contains the projects, files, and notes generated across the Bootcamp.
