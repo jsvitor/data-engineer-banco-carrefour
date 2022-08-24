@@ -1,9 +1,10 @@
-# Cloud Data Engineer at Cognizant Bootcamp
+# Data Engineering
 
+<!--
 <p align="center">
     <img src="./assets/cognizant.png" alt="Cognizant Cloud Data Engineer | Logo" width="300px" />
 </p>
-
+-->
 This repository contains the projects, files, and notes generated across the Bootcamp.
 
 - **[Bootcamp checklist | Notion](https://soapy-beetle-8cf.notion.site/Cognizant-Cloud-Data-Engineer-3f80866593f84c9dabd1b2d3bd224f44)**
