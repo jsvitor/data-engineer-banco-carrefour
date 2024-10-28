@@ -1,172 +1,95 @@
-# Data Engineering
+# Data Engineering Roadmap
+
+Welcome to the Data Engineering Roadmap! This guide outlines the key concepts and skills needed to become a proficient Data Engineer.
+
+## Core Concepts
+
+### Data Engineering Foundations
+- Essential principles of Data Engineering
+- Roles and responsibilities in the field
+- Workflow and methodologies
+- Understanding data pipelines
+- Comparing ETL and ELT approaches
+- Exploring batch and streaming workloads
+- Diving into Big Data concepts
+
+### Data Fundamentals
+- Exploring various data types
+- Understanding data structures
+- Working with different file formats
+- Hands-on exercises with data types and file formats
+
+### Data Architectures
+- Differentiating between OLTP and OLAP systems
+- Exploring Big Data architectures:
+  - Lambda architecture
+  - Kappa architecture
+- Understanding Event-Driven Architecture (EDA)
+
+### Data Acquisition Techniques
+- Identifying diverse data sources
+- Implementing web crawling and scraping
+- Leveraging APIs for data collection
+- Practical exercises in data gathering
+
+### Data Governance and Management
+- Implementing effective data governance strategies
+- Exploring the DATA-DMBOK framework
+
+## Advanced Topics
+
+### Microservices and Containerization
+- Understanding microservices architecture
+- Exploring virtualization and containers
+- Mastering Docker, Docker-Compose, and Kubernetes
+- Building data pipelines with Databricks:
+  - Setting up environments
+  - Utilizing notebooks
+  - Implementing workflows
+
+### Data Analysis and Mining
+- Data preprocessing techniques
+- Feature selection methods
+- Exploring various data mining algorithms
+- Practical classification exercises
+
+### Modern Data Engineering Practices
+- Adopting Agile methodologies
+- Implementing DevOps in data workflows
+- Exploring DataOps principles
+- Understanding FinOps for cost optimization
+- Hands-on DataOps development
+
+### Cutting-Edge Data Stacks
+- Exploring Data Mesh architecture
+- Understanding Zero ETL approaches
+- Leveraging Amazon Aurora Zero-ETL
+- Utilizing Astro Python SDK
+- Building modern data warehouses
+
+### Best Practices in Data Engineering
+- Adhering to Clean Code principles (PEP 8 for Python)
+- Implementing effective version control
+- Creating comprehensive documentation
+
+## Practical Application
+Throughout this roadmap, you'll engage in hands-on projects and exercises to apply your knowledge in real-world scenarios.
+
+## Additional Resources
+- [Docker Commands Reference](./docker-commands.md)
+- [Practical Projects Repository](./projects/)
+- [Supplementary Learning Materials](./resources/)
+
+## Getting Started
+1. Fork this repository to your GitHub account.
+2. Clone the forked repository to your local machine.
+3. Explore each topic in the roadmap sequentially.
+4. Complete associated projects and exercises.
+5. Refer to additional resources for deeper understanding.
+
+## Community Contributions
+We encourage community involvement! If you have suggestions, corrections, or want to add resources, please submit a pull request or open an issue.
+
+## Licensing
+This roadmap is shared under the MIT License.
 
-<!--
-<p align="center">
-    <img src="./assets/cognizant.png" alt="Cognizant Cloud Data Engineer | Logo" width="300px" />
-</p>
--->
-This repository contains the projects, files, and notes generated across the Bootcamp.
-
-- **[Bootcamp checklist | Notion](https://soapy-beetle-8cf.notion.site/Cognizant-Cloud-Data-Engineer-3f80866593f84c9dabd1b2d3bd224f44)**
-
-
-
-## Git & GitHub course
-
-The first content I saw was the Git & GitHub course, because I wanted to reinforce some concepts and  certainly see new stuff.
-
-SHA1 - Secure Hash Algorithm | Used to identify a commit
-
-Commit - store tree, parent, author, message and timestamp. Makes a hash of it.
-
-- [Git Cheat Sheet from **GitHub** Training](https://training.github.com/downloads/github-git-cheat-sheet.pdf) | Cheat Sheets are always a resource that I search for learning something. This one from **GitHub** Training is very cute.
-
- 
-
-## Introduction to Data Engineer
-
-
-
-1. What is a Pipeline?
-2. Difference between data professionals 
-3. DataOPS
-
-## Introduction to Data Science
-
-![Introduction to Data Science](./assets/mindmap-dsbd.png)
-
-
-
-## Introduction to Container Orchestration with Docker
-
-<span>I had already used Databases in Docker Containers and I wanted to learn more and organize my knowledge. In this course I learned about creating images, containers.</span>
-
-- [**Docker Cheat Sheet**](https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf)
-
-1. Introduction to the theme
-
-   - Virtual Machines and Containers
-
-     ![Hyper](./assets/Hypervisor-based-vs-Container-based-Virtualization.png)
-
-   
-
-   
-
-   - Docker architecture
-
-     ![Docker architecture image](./assets/docker-architecture.png)
-
-2. First steps with Docker
-
-3. Docker network
-
-   - Bridge: is the default docker network, used for communication between containers.
-
-     <code>
-
-     $ docker network ls
-
-     $ docker network create -d bridge petsBridge
-
-     $ docker run -d --net petsBridge --name db consul
-
-     $ docker run -d --env "DB=db" --net petsBridge --name web -p 8000:5000 chrch/docker-pets:1.0
-
-     $ docker exec -it web sh
-
-     ​		$ hostname
-
-     </code>
-
-   - Host: removes network isolation, the container responds directly to the host's network card.
-
-     <code>
-
-     $ docker run -d --net host --name db consul
-
-     $ docker run -d --env "DB=localhost" --net host chrch/docker-pets:1.0
-
-     $ docker ps
-
-     $ netstat -nltp
-
-     $ docker logs web
-
-     </code>
-
-   - Overlay: allows communication between containers from different hosts.
-
-     <code>
-
-     $ docker ps
-
-     $ docker rm -f CONTAINER-ID
-
-     $ docker ps -a
-
-     $ docker network create -d bridge petsBridge
-
-     $ docker restart 7c
-
-     <!-- para fazer a comunicação de containers em servidores diferentes, precisamos criar nosso cluster. No nosso caso é um cluster de swarm, mas veremos kubernets tbm. -->
-
-     $ docker swarm init --advertise-addr 192.168.0.18
-
-     $ docker network create -d overlay petsOverlay
-
-     $ docker network ls
-
-     $ docker ps -a
-
-     $ docker service ls
-
-     $ docker service scale web=3
-
-     $ docker service converged
-
-     $ docker swarm join...
-
-     $ docker service scale <service_name>=<int>
-
-     $ docker service create...
-
-     </code>
-
-   - Macvlan: allows you to assign a MAC address to the container, making it visible as a physical container.
-
-   - No network 
-
-     
-
-4. Docker storage
-
-   - storage types:
-
-     ![amounts types](./assets/types-of-mounts.png)
-
-   - on practice
-
-     <code>
-
-     $ docker volume create myFirstVolume
-
-     $ docker volume ls
-
-     $ docker volume inspect myFirstVolume
-
-     $ docker run -d -p 80:80 --name container-volume --mount source=myFirstVolume, target=/usr/share/nginx nginx
-
-     $ vim index.html
-
-     </code>
-
-5. Our project on air
-
-    
-    
-    
-    
-    
-## [Fundamentos de ETL com Python](https://github.com/jsvitor/dio-curso-etl)
-    
