@@ -274,3 +274,4 @@ Remember to always run `terraform plan` before applying changes and maintain pro
 - [Terraform on Google Cloud](https://cloud.google.com/docs/terraform)
 - [Terraform on Google Cloud](https://www.youtube.com/watch?v=nvV6yobU710&list=PLpZQVidZ65jO_wtOpLv-HmC9uJgTRB8GT&index=1)
 - [Terraform explained in 15 mins | Terraform Tutorial for Beginners](https://www.youtube.com/watch?v=l5k1ai_GBDE)
+- [Importing exisiting infrastructure into Terraform](https://spacelift.io/blog/importing-exisiting-infrastructure-into-terraform)
