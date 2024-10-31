@@ -1,8 +1,10 @@
 # Terraform
 
-> This overview is a quick reference for Terraform architecture, commands, syntax, and best practices. It is not a comprehensive guide, but rather a collection of useful snippets and examples. For more detailed information, please refer to the [Terraform Documentation](https://www.terraform.io/docs/index.html). Also you can find a awesome and more complete cheat sheet for Terraform [here](https://cheat-sheets.nicwortel.nl/terraform-cheat-sheet.pdf). At the end of the document you will find a list of references and additional learning resources.
+This overview is a quick reference for Terraform architecture, commands, syntax, best practices, and more importantly a learning path. It is not a comprehensive guide, but rather a collection of useful snippets, examples, and references. For more detailed information, please refer to the [Terraform Documentation](https://www.terraform.io/docs/index.html). At the end you will find a list of references and additional learning resources.
 
-Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Access the [Terraform Roadmap](https://roadmap.sh/terraform) to see the steps to become a Terraform expert.
+### What is Terraform?
+
+For short, Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Access the [Terraform Roadmap](https://roadmap.sh/terraform) to see the steps to become a Terraform expert.
 
 ## Terraform architecture
 
@@ -22,7 +24,7 @@ Terraform architecture consists in a set of components that work together to man
 
 ## Basic Commands
 
-Now let's see some basic commands to get you started with Terraform.
+Now let's see some basic commands to get you started with Terraform. Also you can find a awesome cheat sheet for Terraform commands and syntax [here](https://cheat-sheets.nicwortel.nl/terraform-cheat-sheet.pdf) from [Nic Wortel](https://nicwortel.nl).
 
 ```bash
 # Initialize Terraform working directory
@@ -106,15 +108,15 @@ locals {
 }
 ```
 
-To see more about Terraform configuration language, access the [Write Terraform Configuration](https://developer.hashicorp.com/terraform/tutorials/configuration-language) tutorials in the Terraform documentation.
+✔️ To see more about Terraform configuration language, access the [Write Terraform Configuration](https://developer.hashicorp.com/terraform/tutorials/configuration-language) tutorials in the Terraform documentation. This is a great resource to learn through practical examples and use cases.
 
 ## Variables and References
 
-> - You can specify descriptions, default values, types and constraints, validation rules, and sensitive values.
-> - Also you can use variables to reference other variables, locals, and data sources.
-> - Variables can be passed in at runtime, from a file, from environment variables, or from a remote secrets management service.
-> - Variables types can be `string`, `number`, `bool`, `list` (or `tuple`), `set`, `map` (or `object`), one special type that has no type: `null`.
-> - see more at [Types and Values](https://developer.hashicorp.com/terraform/language/expressions/types)
+- You can specify descriptions, default values, types and constraints, validation rules, and sensitive values.
+- Also you can use variables to reference other variables, locals, and data sources.
+- Variables can be passed in at runtime, from a file, from environment variables, or from a remote secrets management service.
+- Variables types can be `string`, `number`, `bool`, `list` (or `tuple`), `set`, `map` (or `object`), one special type that has no type: `null`.
+- see more at [Types and Values](https://developer.hashicorp.com/terraform/language/expressions/types)
 
 ```hcl
 # Variable types
@@ -278,9 +280,9 @@ In Terraform you can use modules from the [Terraform Registry](https://registry.
 - Use terragrunt for keeping your code DRY
 - Always use version constraints for providers and modules. This ensures that the module is compatible with the provider version.
 
-Remember to always run `terraform plan` before applying changes and maintain proper documentation for your infrastructure code!
+Remember to always run `terraform plan -out=tfplan` before applying changes and maintain proper documentation for your infrastructure code!
 
-## References and additional learning resources
+## 📖 References and additional learning resources
 
 - [Terraform Documentation](https://www.terraform.io/docs/index.html)
 - [Terraform Registry](https://registry.terraform.io/)
